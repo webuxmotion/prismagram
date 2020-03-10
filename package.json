@@ -6,6 +6,10 @@
   "repository": "https://github.com/webuxmotion/prismagram.git",
   "author": "Pereverziev Andrii <pereverziev.andrii@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "deploy": "prisma deploy",
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
   "dependencies": {
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
@@ -20,8 +24,5 @@
     "@babel/cli": "^7.0.0-beta.49",
     "@babel/core": "^7.1.6",
     "nodemon": "^2.0.2"
-  },
-  "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
   }
 }
