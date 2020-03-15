@@ -6,10 +6,9 @@ type User {
   lastName: String
   bio: String!
   loginSecret: String
-  lalala: String
-  posts: [Post!]! @relation(name: "PostOwner", onDelete: CASCADE)
+  posts: [Post!]!
   likes: [Like!]!
-  comments: [Comment!]! @relation(name: "CommentOwner", onDelete: CASCADE)
+  comments: [Comment!]!
   followers: [User!]! @relation(name: "FollowRelation")
   following: [User!]! @relation(name: "FollowRelation")
   rooms: [Room!]!
@@ -19,22 +18,22 @@ type Post {
   id: ID! @id
   location: String
   caption: String!
-  user: User! @relation(name: "PostOwner", onDelete: CASCADE)
+  user: User!
   files: [File!]!
-  likes: [Like!]! @relation(name: "PostLike", onDelete: CASCADE)
+  likes: [Like!]!
   comments: [Comment!]!
 }
 
 type Like {
   id: ID! @id
   user: User!
-  post: Post! @relation(name: "PostLike", onDelete: CASCADE)
+  post: Post!
 }
 
 type Comment {
   id: ID! @id
   text: String!
-  user: User! @relation(name: "CommentOwner", onDelete: CASCADE)
+  user: User!
   post: Post!
 }
 
