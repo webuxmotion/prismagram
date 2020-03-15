@@ -6,6 +6,8 @@ type User {
   lalala: String
   firstName: String
   lastName: String
+  fullName: String
+  amIFollowing: Boolean!
   bio: String!
   posts: [Post!]!
   likes: [Like!]!
@@ -23,6 +25,7 @@ type Post {
   files: [File!]!
   likes: [Like!]!
   comments: [Comment!]!
+  isLiked: Boolean!
 }
 
 type Like {
