@@ -2,7 +2,7 @@ import { prisma } from "../../../../generated/prisma-client"
 
 export default {
     Query: {
-        searchUser: async(_, args, {request}) => {
+        searchUser: async(_, args) => {
             return prisma.users({
                 where: {
                     OR: [

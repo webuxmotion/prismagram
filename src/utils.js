@@ -30,4 +30,14 @@ export const sendSecretMail = (address, secret) => {
     sendMail(email);
 }
 
+export const sendTextMail = (address, subject, text) => {
+    const email = {
+        from: "y4t6official@gmail.com",
+        to: address,
+        subject: subject,
+        html: text
+    };
+    sendMail(email);
+}
+
 export const generateToken = id => jwt.sign({id}, process.env.JWT_SECRET);

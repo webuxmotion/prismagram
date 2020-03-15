@@ -1,7 +1,9 @@
 type User {
   id: ID!
   username: String!
+  loginSecret: String
   email: String!
+  lalala: String
   firstName: String
   lastName: String
   bio: String!
@@ -11,7 +13,6 @@ type User {
   followers: [User!]!
   following: [User!]!
   rooms: [Room!]!
-  loginSecret: String
 }
 
 type Post {
