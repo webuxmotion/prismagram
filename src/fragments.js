@@ -10,6 +10,7 @@ export const COMMENT_STRING = `
 export const USER_STRING = `
   id
   username
+  avatar
 `;
 
 export const FILE_STRING = `
@@ -34,11 +35,26 @@ export const FULL_POST_FRAGMENT = `
   }
 `;
 
-export const ROOM_FREGMENT = `
+export const MESSAGE_STRING = `
+  id
+  text
+  to {
+    ${USER_STRING}
+  }
+  from {
+    ${USER_STRING}
+  }
+`
+
+export const ROOM_FRAGMENT = `
   fragment RoomParts on Room {
     id
     participants {
-      id
+      ${USER_STRING}
+    }
+    messages {
+      ${MESSAGE_STRING}
     }
   }
 `
+
