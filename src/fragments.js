@@ -18,23 +18,6 @@ export const FILE_STRING = `
   url
 `;
 
-export const FULL_POST_FRAGMENT = `
-  fragment PostParts on Post {
-    id
-    location
-    caption
-    files {
-      ${FILE_STRING}
-    }
-    comments {
-      ${COMMENT_STRING}
-    }
-    user {
-      ${USER_STRING}
-    }
-  }
-`;
-
 export const MESSAGE_STRING = `
   id
   text
